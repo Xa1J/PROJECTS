@@ -1,0 +1,292 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
+
+@font-face {
+  font-family: 'Tourmaline Evolution';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Tourmaline Evolution'), url('Tourmaline-Evolution.woff') format('woff');
+  }
+
+html, body {
+  overflow: hidden;
+  /* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* Body */
+body {
+  font-family: 'jersey 10', sans-serif;
+  background: #000;
+  min-height: 100vh; /* Ensure the body covers the viewport */
+  overflow: hidden; /* Prevent scrolling */
+}
+
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.6s;
+  padding: 40px 100px;
+  z-index: 100000;
+}
+
+/* Logo */
+.logo {
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: 0.6s;
+}
+/* Styles for the logo */
+.logo img {
+  width: 50px; /* Adjust the width as per your requirement */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* List Styles */
+header ul {
+  display: flex;
+  align-items: center;
+}
+
+header ul.Centered-links {
+  justify-content: Center; /* Centering the centered links */
+}
+
+header ul.top-right-links {
+  justify-content: flex-end; /* Align right for top right links */
+}
+
+header ul li {
+  list-style: none;
+}
+
+header ul li a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  letter-spacing: 2px;
+  font-weight: 500;
+  transition: 0.6s;
+  font-family: 'jersey 10', sans-serif;
+}
+header .totalQuantity{
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: x-large;
+  background-color: #2e10b3;
+  width: 20px;
+  height: 20px;
+  color: #fff;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transform: translateX(20px);
+}
+
+.background {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  overflow: hidden;
+  will-change: transform;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  height: 130vh;
+  position: fixed;
+  width: 100%;
+  transform: translateY(30vh);
+  transition: all 1.2s cubic-bezier(0.22, 0.44, 0, 1);
+}
+.background:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.background:first-child {
+  background-image: url(i1713218084_4443_6.jpg);
+  transform: translateY(-15vh);
+}
+.background:first-child .content-wrapper {
+  transform: translateY(15vh);
+}
+.background:nth-child(2) {
+  background-image: url(i1713149847_3585_5.jpg);
+}
+.background:nth-child(3) {
+  background-image: url(i1710972943_6395_0.jpg);
+}
+.background:nth-child(4) {
+    background-image: url(i1705166359_5372_8.jpg);
+}
+.background:nth-child(5) {
+    background-image: url(i1712950634_7020_8.jpg);
+}
+.background:nth-child(6) {
+    background-image: url(i1715705392_4146_3.jpg);
+}
+.background:nth-child(7) {
+    background-image: url(i1713663063_2249_2.jpg);
+}
+.background:nth-child(8) {
+    background-image: url(i1710972943_6395_0.jpg);
+}
+
+
+/* Set stacking context of slides */
+.background:nth-child(1) {
+  z-index: 8;
+}
+
+.background:nth-child(2) {
+  z-index: 7;
+}
+
+.background:nth-child(3) {
+  z-index: 6;
+}
+.background:nth-child(4) {
+  z-index: 5;
+}
+.background:nth-child(5) {
+    z-index: 4;
+}
+.background:nth-child(6) {
+    z-index: 3;
+}
+.background:nth-child(7) {
+    z-index: 2;
+}
+.background:nth-child(8) {
+    z-index: 1;
+}
+
+
+
+.content-wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-flow: column nowrap;
+  color: #fff;
+  font-family: Montserrat;
+  text-transform: uppercase;
+  transform: translateY(40vh);
+  will-change: transform;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  transition: all 1.7s cubic-bezier(0.22, 0.44, 0, 1);
+}
+.content-title {
+  font-size: 12vh;
+  line-height: 1.4;
+}
+
+.background.up-scroll {
+  transform: translate3d(0, -15vh, 0);
+}
+.background.up-scroll .content-wrapper {
+  transform: translateY(15vh);
+}
+.background.up-scroll + .background {
+  transform: translate3d(0, 30vh, 0);
+}
+.background.up-scroll + .background .content-wrapper {
+  transform: translateY(30vh);
+}
+
+.background.down-scroll {
+  transform: translate3d(0, -130vh, 0);
+}
+.background.down-scroll .content-wrapper {
+  transform: translateY(40vh);
+}
+.background.down-scroll + .background:not(.down-scroll) {
+  transform: translate3d(0, -15vh, 0);
+}
+.background.down-scroll + .background:not(.down-scroll) .content-wrapper {
+  transform: translateY(15vh);
+}
+footer {
+  position: fixed;
+  bottom: 50px;
+  width: 100%;
+  z-index: 999; /* Ensure it appears above other content */
+}
+
+.bottom-links {
+  position: fixed;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999; /* Ensure it appears above other content */
+  display: flex;
+  justify-content: center; /* Align links horizontally at the center */
+  padding: 10px 0; /* Adjust padding as needed */
+  margin: 0; /* Remove default margin */
+  list-style-type: none; /* Remove default list styles */
+}
+
+.bottom-links li {
+  margin: 0 15px; /* Adjust margin between links */
+}
+
+.bottom-links li a {
+  text-decoration: none;
+  color: #ffffff; /* Adjust link color */
+  /* Add additional styling as needed */
+}
+
+
+/* Sticky Header */
+header.sticky .logo,
+header.sticky ul li a {
+  color: #000;
+}
+@media (min-width: 576px) {
+  header {
+    padding: 20px 30px;
+  }
+}
+
+@media (min-width: 768px) {
+  header {
+    padding: 30px 50px; 
+  }
+}
+
+@media (min-width: 992px) {
+  .logo img {
+    width: 80px; 
+  }
+}
+
+@media (min-width: 1200px) {
+  .logo img {
+    width: 100px; 
+  }
+}
+}
