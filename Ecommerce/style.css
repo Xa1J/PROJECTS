@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+
+}
+
+.logo{
+    width: 7%;
+    height: 7%;
+}
+.admin_image{
+    width: 100px;
+    object-fit: contain;
+}
+.cart_img{
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+.profile_img{
+    width: 100%;
+    margin: auto;
+    display: block;
+    /* height: 100%; */
+    object-fit: contain;
+}
+.edit_img{
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}

@@ -1,0 +1,33 @@
+body{
+    font-family: 'Jersey 10', sans-serif;
+}
+.h10{
+    font-size: 2.5rem; 
+    font-family: 'Jersey 10', sans-serif;
+}
+
+h2, h3, h4, h5, h6 {
+    font-size: 2.5rem; 
+}
+.cart-item-count {
+    font-size: 30px; 
+}
+.card-title{
+    font-family: "Bebas Neue", sans-serif;
+}
+.card-text {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 20px; /* Adjust the font size for the description */
+}
+
+.card-text {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 20px; /* Adjust the font size for the price */
+}
+
+.btn {
+    font-size: 20px; /* Adjust the font size for the buttons */
+}
+.head{
+    font-size: 20px;
+}
